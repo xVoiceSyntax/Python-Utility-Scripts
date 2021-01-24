@@ -3,8 +3,7 @@ import os, sys
 commit_message = ""
 
 if len(sys.argv) == 1:
-    print("[Syntax] Please use: commit.py <Message>")
-    exit()
+    commit_message = input("[Syntax] Please enter the commit message: ")
 
 for arg in enumerate(sys.argv[1:]):
     commit_message = commit_message + str(arg).split(", ")[1].replace("'", "").replace(")", "") + " "
